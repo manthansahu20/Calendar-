@@ -10,52 +10,25 @@
 
 ---
 
-## 👨‍💻 About Me
+# 👨‍💻 About Me
 
-✨ I'm **Manthan Sahu**, a passionate developer who loves building clean and powerful software.  
+✨ I'm **Manthan Sahu**, a passionate developer who loves building clean and powerful software.
 
-🔹 Exploring Software Development, AI, ML & Web Technologies  
-🔹 Skilled in Python, C, C++, JavaScript, SQL  
+🔹 Exploring **Software Development, AI, ML, & Web Technologies**  
+🔹 Skilled in **Python, C, C++, JavaScript, SQL**  
+🔹 Love writing **optimised + scalable code**  
 🔹 Currently pursuing **B.Sc in Computer Science**  
-🔹 Always learning • Always building • Always improving  
+🔹 Always learning. Always building. Always improving.
 
 ---
 
-# ⚡ **Animated Tech Stack (Logo Only, Ultra Premium)**
-
-### 🚀 Languages  
+## ⚡ Tech Stack (Only Logos)
 <p align="center">
-  <!-- Using skillicons (animated bounce) -->
-  <img src="https://skillicons.dev/icons?i=python&theme=dark" height="70" />
-  <img src="https://skillicons.dev/icons?i=c&theme=dark" height="70" />
-  <img src="https://skillicons.dev/icons?i=cpp&theme=dark" height="70" />
-  <img src="https://skillicons.dev/icons?i=js&theme=dark" height="70" />
-  <img src="https://skillicons.dev/icons?i=html&theme=dark" height="70" />
-  <img src="https://skillicons.dev/icons?i=css&theme=dark" height="70" />
-  <img src="https://skillicons.dev/icons?i=mysql&theme=dark" height="70" />
-</p>
-
----
-
-### 🧩 Frameworks & Tools  
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=git&theme=dark" height="70" />
-  <img src="https://skillicons.dev/icons?i=github&theme=dark" height="70" />
-  <img src="https://skillicons.dev/icons?i=react&theme=dark" height="70" />
-  <img src="https://skillicons.dev/icons?i=nodejs&theme=dark" height="70" />
-  <img src="https://skillicons.dev/icons?i=vscode&theme=dark" height="70" />
-  <img src="https://skillicons.dev/icons?i=linux&theme=dark" height="70" />
-  <img src="https://skillicons.dev/icons?i=bootstrap&theme=dark" height="70" />
-</p>
-
----
-
-### 🔥 Currently Learning  
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=django&theme=dark" height="70" />
-  <img src="https://skillicons.dev/icons?i=tensorflow&theme=dark" height="70" />
-  <img src="https://skillicons.dev/icons?i=mongodb&theme=dark" height="70" />
-  <img src="https://skillicons.dev/icons?i=flask&theme=dark" height="70" />
+  <img src="https://skillicons.dev/icons?i=python,c,cpp,javascript,html,css,sql,java,typescript,rust,go" height="50" />
+  <br><br>
+  <img src="https://skillicons.dev/icons?i=react,nodejs,express,django,flask,bootstrap,tailwind,mongodb,postgresql,redux,graphql" height="50" />
+  <br><br>
+  <img src="https://skillicons.dev/icons?i=git,github,vscode,linux,docker,aws,figma,postman,heroku,vercel" height="50" />
 </p>
 
 ---
@@ -71,7 +44,15 @@
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=manthansahu20&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=FF00FF&icon_color=FF00FF" height="180">
+
   <img src="https://github-readme-streak-stats.herokuapp.com?user=manthansahu20&theme=radical&hide_border=true&background=0D1117&ring=FF00FF&fire=FF00FF&currStreakLabel=FF00FF" height="180">
+</p>
+
+---
+
+# 🔮 Activity Graph (Neon Animated)
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=manthansahu20&theme=tokyo-night&bg_color=0D1117&color=FF00FF&line=FF00FF&point=FFFFFF&hide_border=true"/>
 </p>
 
 ---
@@ -79,10 +60,10 @@
 # 🌐 Connect With Me  
 <p align="center">
   <a href="https://www.linkedin.com/in/manthansahu20">
-    <img src="https://skillicons.dev/icons?i=linkedin" height="60"/>
+    <img src="https://skillicons.dev/icons?i=linkedin" height="55"/>
   </a>
   <a href="mailto:manthansahusahu@gmail.com">
-    <img src="https://skillicons.dev/icons?i=gmail" height="60"/>
+    <img src="https://skillicons.dev/icons?i=gmail" height="55"/>
   </a>
 </p>
 
@@ -95,5 +76,5 @@
 
 ---
 
-### ✨ Final Quote
-**“Turning ideas into reality through code — one line at a time.”** 🚀💜
+# ✨ Final Quote  
+### _“Turning ideas into reality through code — one line at a time.”_ 🚀💜
