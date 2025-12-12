@@ -22,40 +22,40 @@
 
 ---
 
-# ⚡ Animated Tech Stack (Ultra Premium)
+# ⚡ Animated Tech Stack (Ultra Premium – 100% Working)
 
 ## 🚀 **Languages**
 <p align="center">
-  <img src="https://raw.githubusercontent.com/mr-destructive/animated-tech-icons/main/python.gif" height="65"/>
-  <img src="https://raw.githubusercontent.com/mr-destructive/animated-tech-icons/main/c.gif" height="65"/>
-  <img src="https://raw.githubusercontent.com/mr-destructive/animated-tech-icons/main/cpp.gif" height="65"/>
-  <img src="https://raw.githubusercontent.com/mr-destructive/animated-tech-icons/main/javascript.gif" height="65"/>
-  <img src="https://raw.githubusercontent.com/mr-destructive/animated-tech-icons/main/html.gif" height="65"/>
-  <img src="https://raw.githubusercontent.com/mr-destructive/animated-tech-icons/main/css.gif" height="65"/>
-  <img src="https://raw.githubusercontent.com/mr-destructive/animated-tech-icons/main/sql.gif" height="65"/>
+  <img src="https://img.shields.io/badge/Python-000000?style=for-the-badge&logo=python&logoColor=yellow" />
+  <img src="https://img.shields.io/badge/C-000000?style=for-the-badge&logo=c&logoColor=white" />
+  <img src="https://img.shields.io/badge/C++-000000?style=for-the-badge&logo=c%2B%2B&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-000000?style=for-the-badge&logo=javascript&logoColor=yellow" />
+  <img src="https://img.shields.io/badge/HTML-000000?style=for-the-badge&logo=html5&logoColor=orange" />
+  <img src="https://img.shields.io/badge/CSS-000000?style=for-the-badge&logo=css3&logoColor=blue" />
+  <img src="https://img.shields.io/badge/SQL-000000?style=for-the-badge&logo=postgresql&logoColor=white" />
 </p>
 
 ---
 
 ## 🧩 **Frameworks & Tools**
 <p align="center">
-  <img src="https://raw.githubusercontent.com/mr-destructive/animated-tech-icons/main/git.gif" height="65"/>
-  <img src="https://raw.githubusercontent.com/mr-destructive/animated-tech-icons/main/github.gif" height="65"/>
-  <img src="https://raw.githubusercontent.com/mr-destructive/animated-tech-icons/main/react.gif" height="65"/>
-  <img src="https://raw.githubusercontent.com/mr-destructive/animated-tech-icons/main/node.gif" height="65"/>
-  <img src="https://raw.githubusercontent.com/mr-destructive/animated-tech-icons/main/vscode.gif" height="65"/>
-  <img src="https://raw.githubusercontent.com/mr-destructive/animated-tech-icons/main/linux.gif" height="65"/>
-  <img src="https://raw.githubusercontent.com/mr-destructive/animated-tech-icons/main/bootstrap.gif" height="65"/>
+  <img src="https://img.shields.io/badge/Git-000000?style=for-the-badge&logo=git&logoColor=orange" />
+  <img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=white" />
+  <img src="https://img.shields.io/badge/React-000000?style=for-the-badge&logo=react&logoColor=61DAFB" />
+  <img src="https://img.shields.io/badge/Node.js-000000?style=for-the-badge&logo=node.js&logoColor=green" />
+  <img src="https://img.shields.io/badge/VSCode-000000?style=for-the-badge&logo=visualstudiocode&logoColor=blue" />
+  <img src="https://img.shields.io/badge/Linux-000000?style=for-the-badge&logo=linux&logoColor=yellow" />
+  <img src="https://img.shields.io/badge/Bootstrap-000000?style=for-the-badge&logo=bootstrap&logoColor=purple" />
 </p>
 
 ---
 
 ## 🔥 **Currently Learning**
 <p align="center">
-  <img src="https://raw.githubusercontent.com/mr-destructive/animated-tech-icons/main/django.gif" height="65"/>
-  <img src="https://raw.githubusercontent.com/mr-destructive/animated-tech-icons/main/tensorflow.gif" height="65"/>
-  <img src="https://raw.githubusercontent.com/mr-destructive/animated-tech-icons/main/mongodb.gif" height="65"/>
-  <img src="https://raw.githubusercontent.com/mr-destructive/animated-tech-icons/main/flask.gif" height="65"/>
+  <img src="https://img.shields.io/badge/Django-000000?style=for-the-badge&logo=django&logoColor=white" />
+  <img src="https://img.shields.io/badge/TensorFlow-000000?style=for-the-badge&logo=tensorflow&logoColor=orange" />
+  <img src="https://img.shields.io/badge/MongoDB-000000?style=for-the-badge&logo=mongodb&logoColor=green" />
+  <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" />
 </p>
 
 ---
