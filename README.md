@@ -6,6 +6,7 @@
   <img src="https://readme-typing-svg.herokuapp.com?font=Playfair+Display&size=26&duration=3500&pause=1200&color=8FAADC&center=true&vCenter=true&width=700&lines=Silence.+Focus.+Creation." />
 </p>
 
+
 ---
 
 <p align="center">
