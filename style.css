@@ -1,104 +1,43 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
+/* ----- RESET ----- */
+* {margin:0;padding:0;box-sizing:border-box;font-family:sans-serif;}
+body {display:flex;justify-content:center;align-items:flex-start;min-height:100vh;padding:20px;transition: background 0.3s, color 0.3s;}
+button {cursor:pointer;}
 
-body {
-    height: 100vh;
-    background: url("https://i.imgur.com/Uu8hWqo.jpeg");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+/* ----- THEMES ----- */
+body.light {background:#f9f9f9;color:#333;}
+body.dark {background:#1e1e1e;color:#f1f1f1;}
+body.blue {background:#e0f7ff;color:#012a4a;}
+body.green {background:#eafaf1;color:#034d17;}
 
-/* Glassmorphism Card */
-.calendar-container {
-    width: 380px;
-    padding: 20px;
-    border-radius: 20px;
-    backdrop-filter: blur(12px);
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 20px #ff77ee, 0 0 30px rgba(255, 255, 255, 0.3);
-    color: white;
-    animation: fadeIn 1s ease-in-out;
-}
+/* ----- CALENDAR APP ----- */
+.calendar-app {width:100%;max-width:900px;}
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.9);}
-    to { opacity: 1; transform: scale(1); }
-}
+/* Theme Switcher */
+.theme-switcher {margin-bottom:10px;display:flex;align-items:center;gap:10px;}
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+/* Calendar Header */
+.calendar-header {display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;}
+.calendar-header h2 {transition: all 0.3s;}
 
-.header button {
-    background: #ff77ee;
-    border: none;
-    padding: 8px 14px;
-    border-radius: 10px;
-    font-size: 18px;
-    color: white;
-    cursor: pointer;
-    transition: 0.3s;
-}
+/* Calendar Grid */
+.calendar-grid {display:grid;grid-template-columns:repeat(7,1fr);gap:5px;}
+.day {padding:15px;text-align:center;border-radius:8px;transition: transform 0.2s, background 0.3s;position:relative;}
+.day:hover {transform:scale(1.05);}
+.day.today {border:2px solid #ff6347;}
+.day.past {opacity:0.5;}
+.event-dot {width:6px;height:6px;background:red;border-radius:50%;position:absolute;bottom:5px;left:50%;transform:translateX(-50%);}
 
-.header button:hover {
-    background: #ff44dd;
-    transform: scale(1.1);
-}
+/* Day Panel */
+.day-panel {position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(0);width:300px;background:#fff;color:#333;padding:20px;border-radius:12px;box-shadow:0 5px 20px rgba(0,0,0,0.3);transition: transform 0.3s;}
+.day-panel.active {transform:translate(-50%,-50%) scale(1);}
+.day-panel .panel-header {display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;}
+.day-panel h3 {font-size:1.2em;}
+.events-list {max-height:150px;overflow-y:auto;margin-bottom:10px;}
+.events-list div {padding:5px;border-bottom:1px solid #ddd;}
+form input {width:70%;padding:5px;margin-right:5px;}
+form button {padding:5px;}
 
-#month-year {
-    font-size: 22px;
-    text-shadow: 0 0 8px #ff99ff;
-}
-
-/* Weekdays */
-.weekdays {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    text-align: center;
-    font-weight: bold;
-}
-
-/* Days Grid */
-.days {
-    margin-top: 10px;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 8px;
-}
-
-.day {
-    padding: 12px;
-    text-align: center;
-    border-radius: 10px;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-.day:hover {
-    background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 0 10px #ff99ff;
-    transform: scale(1.05);
-}
-
-/* Previous & next month faded color */
-.other-month {
-    opacity: 0.4;
-}
-
-/* Today highlight */
-.today {
-    background: #ff44dd;
-    color: white;
-    box-shadow: 0 0 15px #ff44dd;
-    font-weight: bold;
-}
+/* Dark & other themes adjustments */
+body.dark .day-panel {background:#333;color:#f1f1f1;}
+body.blue .day-panel {background:#cceeff;color:#012a4a;}
+body.green .day-panel {background:#d8f2e4;color:#034d17;}
