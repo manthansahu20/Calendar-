@@ -1,55 +1,117 @@
-let date = new Date();
-let renderDate = new Date();
+// ----- STATE -----
+let currentDate = new Date();
+let selectedDate = null;
+let events = JSON.parse(localStorage.getItem("calendarEvents") || "{}");
 
-const monthYear = document.getElementById("month-year");
-const daysContainer = document.getElementById("days");
+// ----- DOM -----
+const monthYearEl = document.getElementById("monthYear");
+const calendarGrid = document.getElementById("calendarGrid");
+const dayPanel = document.getElementById("dayPanel");
+const selectedDateEl = document.getElementById("selectedDate");
+const eventsList = document.getElementById("eventsList");
+const addEventForm = document.getElementById("addEventForm");
+const eventInput = document.getElementById("eventInput");
+const themeSelect = document.getElementById("themeSelect");
 
-function renderCalendar() {
-    renderDate.setDate(1);
+// ----- THEME -----
+themeSelect.value = localStorage.getItem("calendarTheme") || "light";
+document.body.className = themeSelect.value;
+themeSelect.addEventListener("change",()=>{
+  document.body.className = themeSelect.value;
+  localStorage.setItem("calendarTheme",themeSelect.value);
+});
 
-    const month = renderDate.getMonth();
-    const year = renderDate.getFullYear();
-
-    monthYear.innerText = `${renderDate.toLocaleString("default", { month: "long" })} ${year}`;
-
-    const firstDayIndex = renderDate.getDay();
-    const lastDay = new Date(year, month + 1, 0).getDate();
-    const prevLastDay = new Date(year, month, 0).getDate();
-
-    let days = "";
-
-    // Previous month days
-    for (let x = firstDayIndex; x > 0; x--) {
-        days += `<div class="day other-month">${prevLastDay - x + 1}</div>`;
+// ----- GENERATE CALENDAR -----
+function generateCalendar(date){
+  calendarGrid.innerHTML = "";
+  const year = date.getFullYear();
+  const month = date.getMonth();
+  const firstDay = new Date(year, month, 1).getDay();
+  const daysInMonth = new Date(year, month+1, 0).getDate();
+  
+  // blank slots for first day
+  for(let i=0;i<firstDay;i++){
+    const blank = document.createElement("div");
+    calendarGrid.appendChild(blank);
+  }
+  
+  for(let day=1;day<=daysInMonth;day++){
+    const dayEl = document.createElement("div");
+    dayEl.className = "day";
+    const thisDate = `${year}-${month+1}-${day}`;
+    dayEl.textContent = day;
+    
+    if(isToday(year,month,day)) dayEl.classList.add("today");
+    if(new Date(year,month,day) < new Date()) dayEl.classList.add("past");
+    if(events[thisDate]) {
+      const dot = document.createElement("div");
+      dot.className="event-dot";
+      dayEl.appendChild(dot);
     }
-
-    // Current month days
-    for (let i = 1; i <= lastDay; i++) {
-        let todayClass = "";
-
-        if (
-            i === date.getDate() &&
-            month === date.getMonth() &&
-            year === date.getFullYear()
-        ) {
-            todayClass = "today";
-        }
-
-        days += `<div class="day ${todayClass}">${i}</div>`;
-    }
-
-    daysContainer.innerHTML = days;
+    
+    dayEl.addEventListener("click",()=>openDayPanel(thisDate));
+    
+    calendarGrid.appendChild(dayEl);
+  }
+  
+  monthYearEl.textContent = `${date.toLocaleString('default',{month:'long'})} ${year}`;
 }
 
-// Buttons
-document.getElementById("prevBtn").onclick = () => {
-    renderDate.setMonth(renderDate.getMonth() - 1);
-    renderCalendar();
-};
+// ----- TODAY CHECK -----
+function isToday(y,m,d){
+  const today = new Date();
+  return today.getFullYear()===y && today.getMonth()===m && today.getDate()===d;
+}
 
-document.getElementById("nextBtn").onclick = () => {
-    renderDate.setMonth(renderDate.getMonth() + 1);
-    renderCalendar();
-};
+// ----- PANEL -----
+function openDayPanel(dateStr){
+  selectedDate = dateStr;
+  selectedDateEl.textContent = dateStr;
+  renderEvents();
+  dayPanel.classList.add("active");
+}
+document.getElementById("closePanel").addEventListener("click",()=>dayPanel.classList.remove("active"));
 
-renderCalendar();
+// ----- EVENTS -----
+function renderEvents(){
+  eventsList.innerHTML = "";
+  if(events[selectedDate]){
+    events[selectedDate].forEach((ev,i)=>{
+      const div = document.createElement("div");
+      div.textContent = ev;
+      div.addEventListener("dblclick",()=>deleteEvent(i));
+      eventsList.appendChild(div);
+    });
+  }
+}
+
+function deleteEvent(index){
+  events[selectedDate].splice(index,1);
+  if(events[selectedDate].length===0) delete events[selectedDate];
+  localStorage.setItem("calendarEvents",JSON.stringify(events));
+  renderEvents();
+  generateCalendar(currentDate);
+}
+
+addEventForm.addEventListener("submit",(e)=>{
+  e.preventDefault();
+  if(!events[selectedDate]) events[selectedDate]=[];
+  events[selectedDate].push(eventInput.value);
+  eventInput.value="";
+  localStorage.setItem("calendarEvents",JSON.stringify(events));
+  renderEvents();
+  generateCalendar(currentDate);
+});
+
+// ----- MONTH NAV -----
+document.getElementById("prevMonth").addEventListener("click",()=>{
+  currentDate.setMonth(currentDate.getMonth()-1);
+  generateCalendar(currentDate);
+});
+document.getElementById("nextMonth").addEventListener("click",()=>{
+  currentDate.setMonth(currentDate.getMonth()+1);
+  generateCalendar(currentDate);
+});
+
+// ----- INITIAL -----
+generateCalendar(currentDate);
