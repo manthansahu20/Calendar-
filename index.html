@@ -1,25 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Anime Calendar</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Calendar</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="calendar-app">
 
-<div class="calendar-container">
+  <!-- Theme Selector -->
+  <div class="theme-switcher">
+    <label>Theme:</label>
+    <select id="themeSelect">
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+      <option value="blue">Blue</option>
+      <option value="green">Green</option>
+    </select>
+  </div>
 
-    <div class="header">
-        <button id="prevBtn">◀</button>
-        <h2 id="month-year"></h2>
-        <button id="nextBtn">▶</button>
+  <!-- Calendar Header -->
+  <div class="calendar-header">
+    <button id="prevMonth">&lt;</button>
+    <h2 id="monthYear"></h2>
+    <button id="nextMonth">&gt;</button>
+  </div>
+
+  <!-- Calendar Grid -->
+  <div class="calendar-grid" id="calendarGrid">
+    <!-- Days will be generated here -->
+  </div>
+
+  <!-- Day Panel -->
+  <div class="day-panel" id="dayPanel">
+    <div class="panel-header">
+      <h3 id="selectedDate"></h3>
+      <button id="closePanel">X</button>
     </div>
-
-    <div class="weekdays">
-        <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+    <div class="events-list" id="eventsList">
+      <!-- Events will appear here -->
     </div>
-
-    <div class="days" id="days"></div>
+    <form id="addEventForm">
+      <input type="text" id="eventInput" placeholder="Add new event" required>
+      <button type="submit">Add Event</button>
+    </form>
+  </div>
 
 </div>
 
